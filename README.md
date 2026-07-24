@@ -1,54 +1,119 @@
-# InternGrow_CGPAPlanner
+# 🎓 CGPA Insight
+
+An automated **Semester GPA & CGPA calculator** with a predictive planning feature, built as a **C++ console application** with an accompanying interactive **web version**.
+
+**🔗 Live Demo:** [https://ayeshajavid91-star.github.io/CGPA-Insight/](https://ayeshajavid91-star.github.io/CGPA-Insight/)
+
+---
 
 ## 📌 Project Overview
-**Automated Semester CGPA Planner** is a C++ console application developed as part of the **InternGrow C++ Programming Track (Module 1 – Task 1)**. It allows students to input their course details, grades, and credit hours to automatically calculate their **Semester GPA** and **Cumulative CGPA (CGPA)**.
 
-## 🚀 Features
+CGPA Insight takes course details, grades, and credit hours as input and automatically computes both **Semester GPA** and **Cumulative CGPA**. Its standout feature works backward from a target CGPA to tell students exactly what GPA they need in upcoming semesters to reach their goal.
 
-### Core Features
-- Accepts input for multiple semesters and multiple courses per semester
-- Converts letter grades (A, B, C, D, F) into grade points automatically
+---
+
+## ✨ Features
+
+### 🔢 Core Features
+- Accepts multiple semesters and multiple courses per semester
+- Automatically converts letter grades (A, B, C, D, F) into grade points
 - Calculates **individual Semester GPA** using the standard weighted formula
 - Calculates **Cumulative CGPA** across all entered semesters
-- Displays a clean, formatted final report of all results
+- Displays a clean, formatted final report
 
-### 🔥 Upgrade Feature — Predictive CGPA Simulation
-- Allows the user to enter a **target CGPA**
-- Calculates the **minimum GPA required in upcoming semesters** to achieve that target, based on remaining credit hours
-- Warns the user if the target is mathematically unachievable (required GPA > 4.0)
-- Notifies the user if they have already surpassed their target CGPA
+### 🔮 Predictive CGPA Planning
+- Enter a **target CGPA** and get the minimum GPA required in future semesters to reach it
+- Warns when the target is mathematically unachievable (required GPA exceeds 4.0)
+- Notifies the user if the target has already been surpassed
+
+---
 
 ## 🛠️ Tech Stack
-- **Language:** C++
-- **Concepts Used:** Structures, Functions, Vectors, Loops, Conditional Logic
+
+| Layer | Technology |
+|---|---|
+| Core Logic | C++ (Structures, Functions, Vectors, Conditional Logic) |
+| Web Version | HTML, CSS, JavaScript |
+
+---
 
 ## ⚙️ How It Works
-1. The program calculates GPA using:
+
+**Semester GPA:**
+```
 GPA = (Σ Grade Point × Credit Hours) / (Σ Credit Hours)
+```
 
-2. It accumulates grade points and credit hours across semesters to compute:
+**Cumulative CGPA:**
+```
 CGPA = (Σ All Grade Points) / (Σ All Credit Hours)
+```
 
-3. For the predictive feature, it works backward from a target CGPA to determine the required future GPA:
+**Predictive Required GPA:**
+```
 Required GPA = (Target CGPA × Total Future Credits − Current Total Points) / Remaining Credits
+```
+
+---
 
 ## ▶️ How to Run
-1. Compile the program:
-g++ CGPA_Planner_Upgraded.cpp -o CGPA_Planner
-2. Run the executable:
-./CGPA_Planner
-3. Follow the on-screen prompts to enter semester, course, grade, and credit hour details.
 
-## 📸 Sample Output
-===== Automated Semester CGPA Planner =====
-Semester 1 GPA: 3.43
-Overall CGPA (ab tak): 3.43
+### C++ Console Version
+```bash
+g++ CGPA_Insight.cpp -o CGPA_Insight
+./CGPA_Insight
+```
+Follow the on-screen prompts to enter semester, course, grade, and credit-hour details.
 
-Target CGPA (3.80) hasil karne ke liye,
-aapko baaki semesters mein kam se kam GPA chahiye: 3.89
+### Web Version
+No installation needed — try it live:
+👉 **[Open CGPA Insight](https://ayeshajavid91-star.github.io/CGPA-Insight/)**
 
-## 🎓 About InternGrow
-This project was developed as part of the **InternGrow C++ Programming Track**, a project-based internship program focused on providing hands-on programming experience.
+Or run locally:
+```bash
+git clone https://github.com/ayeshajavid91-star/CGPA-Insight.git
+cd CGPA-Insight
+```
+Then open `index.html` in your browser.
+
+---
+
+## 📂 Project Structure
+
+```
+CGPA-Insight/
+├── CGPA_Insight.cpp     # C++ console application
+├── index.html            # Web version
+└── README.md
+```
+
+---
+
+## 🏷️ Suggested GitHub Topics
+
+```
+cpp
+gpa-calculator
+cgpa-calculator
+academic-tools
+javascript
+web-app
+```
+
+---
 
 ## 👤 Author
-Developed by [Your Name] as part of InternGrow Internship — Module 1.
+
+Developed by **Ayesha Javid**.
+
+---
+
+## 📄 License
+
+**All Rights Reserved.**
+
+This project and its source code are the intellectual property of the author. No part of this repository — including the code, design, or documentation — may be copied, modified, distributed, used, or reproduced in any form without the explicit written permission of the author.
+
+© 2026 Ayesha Javid. Unauthorized use is strictly prohibited.
+
+For permissions or licensing inquiries, contact: **ayeshajavid91@gmail.com**
